@@ -22,6 +22,13 @@ Post.find_or_create_by!(
   title: "Unique title",
   body: "Unique body"
 )
+
+puts "#{Post.count}"
+Comment.find_or_create_by!(
+  post: posts.first,
+  body: "Unique body"
+)
+
 puts "#{Post.count}"
 
 puts "Seed finished"
