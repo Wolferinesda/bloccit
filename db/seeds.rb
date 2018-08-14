@@ -19,14 +19,14 @@ end
 
 puts "#{Post.count}"
 Post.find_or_create_by!(
-  title: "Unique title",
-  body: "Unique body"
+  title: "Unique post title",
+  body: "Unique post body"
 )
 
 puts "#{Post.count}"
 Comment.find_or_create_by!(
   post: posts.first,
-  body: "Unique body"
+  body: "Unique comment body"
 )
 
 puts "#{Post.count}"
