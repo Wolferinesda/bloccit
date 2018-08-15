@@ -18,14 +18,14 @@ posts = Post.all
 end
 
 puts "#{Post.count}"
-Post.find_or_create_by!(
+originalPost = Post.find_or_create_by!(
   title: "Unique post title",
   body: "Unique post body"
 )
 
 puts "#{Post.count}"
 Comment.find_or_create_by!(
-  post: posts.first,
+  post: Post.find(originalPost.id),
   body: "Unique comment body"
 )
 
