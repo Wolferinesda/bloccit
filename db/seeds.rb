@@ -17,20 +17,15 @@ posts = Post.all
   )
 end
 
-puts "#{Post.count}"
-originalPost = Post.find_or_create_by!(
-  title: "Unique post title",
-  body: "Unique post body"
-)
-
-puts "#{Post.count}"
-Comment.find_or_create_by!(
-  post: Post.find(originalPost.id),
-  body: "Unique comment body"
-)
-
-puts "#{Post.count}"
+150.times do
+  Question.create!(
+    title: RandomData.random_sentence,
+    body: RandomData.random_paragraph,
+    resolved:false
+  )
+end
 
 puts "Seed finished"
 puts "#{Post.count} posts created"
 puts "#{Comment.count} comments created"
+puts "#{Question.count} questions created"
