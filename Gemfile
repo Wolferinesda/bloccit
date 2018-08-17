@@ -34,6 +34,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
   gem 'rails-controller-testing'
+  gem 'shoulda'
 end
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
