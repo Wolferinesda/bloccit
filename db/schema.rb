@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 2018_08_21_202239) do
   create_table "sponsored_posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
-    t.integer "price"
+    t.integer "topic_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["topic_id"], name: "index_sponsored_posts_on_topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
