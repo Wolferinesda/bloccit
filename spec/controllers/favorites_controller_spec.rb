@@ -40,7 +40,7 @@ RSpec.describe FavoritesController, type: :controller do
         expect(my_user.favorites.find_by_post_id(my_post.id)).not_to be_nil
       end
     end
-    
+
     describe 'DELETE destroy' do
       it 'redirects to the posts show view' do
         favorite = my_user.favorites.where(post: my_post).create
